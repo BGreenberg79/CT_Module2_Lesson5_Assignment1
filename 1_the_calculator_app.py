@@ -53,12 +53,27 @@ as you do not start counting from zero or multiplying from onen like you do in t
 # Task 2  Implement User Input
 
 choose_operation = input("What operation would you like to use (addition, subtraction, multiplication, division): " )
-if choose_operation == addition:
+if choose_operation == "addition":
+    addition_list = []
     while True:
         add_terms_input = input("What numbers would you like to total? (If finished type 'done'): ")
         if add_terms_input != 'done':
-            add_terms = add_terms_input
+            addition_list.append(int(add_terms_input))
         if add_terms_input == 'done':
             break
-user_output_add = addition(add_terms_input)
+    user_output_add = addition(*addition_list)
 print(user_output_add)
+#Tutor Daniel said to try subtract, multiplication, division by calling function
+def chose_subtract():
+    while True:
+        sub_terms_input = input("What numbers would you like to subtract? (If finished type 'done'): ") #how do I change this for start parameter "x" before the subtraction list *args?
+        if sub_terms_input != "done":
+            subtraction_list.append(int(sub_terms_input))
+        if sub_terms_input == "done":
+            break
+
+if choose_operation == "subtraction":
+    subtraction_list = []
+    chose_subtract()
+    user_output_subtract = subtraction(, *subtraction_list)
+print(user_output_subtract)
