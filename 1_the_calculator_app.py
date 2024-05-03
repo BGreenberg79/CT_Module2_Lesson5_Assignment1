@@ -52,28 +52,42 @@ as you do not start counting from zero or multiplying from onen like you do in t
 
 # Task 2  Implement User Input
 
+def calculate_with_one_parameter(operation):
+    parameter_list = []
+    while True:
+        terms_input = input("What numbers would you like to calculate? (If finished type 'done'): ")
+        if terms_input != 'done':
+            parameter_list.append(int(terms_input))
+        if terms_input == 'done':
+            break
+    return operation(*parameter_list)
+
+def calculate_with_two_parameter(operation):
+    start = input("What is the first term you want to calculate from?: ")
+    parameter_list = []
+    while True:
+        terms_input = input("What numbers would you like to calculate? (If finished type 'done'): ")
+        if terms_input != 'done':
+            parameter_list.append(int(terms_input))
+        if terms_input == 'done':
+            break
+    return operation(int(start), *parameter_list)
+
 choose_operation = input("What operation would you like to use (addition, subtraction, multiplication, division): " )
 if choose_operation == "addition":
-    addition_list = []
-    while True:
-        add_terms_input = input("What numbers would you like to total? (If finished type 'done'): ")
-        if add_terms_input != 'done':
-            addition_list.append(int(add_terms_input))
-        if add_terms_input == 'done':
-            break
-    user_output_add = addition(*addition_list)
-print(user_output_add)
-#Tutor Daniel said to try subtract, multiplication, division by calling function
-def chose_subtract():
-    while True:
-        sub_terms_input = input("What numbers would you like to subtract? (If finished type 'done'): ") #how do I change this for start parameter "x" before the subtraction list *args?
-        if sub_terms_input != "done":
-            subtraction_list.append(int(sub_terms_input))
-        if sub_terms_input == "done":
-            break
-
+    print(calculate_with_one_parameter(addition))
+if choose_operation == "multiplication":
+    print(calculate_with_one_parameter(multiplication))
 if choose_operation == "subtraction":
-    subtraction_list = []
-    chose_subtract()
-    user_output_subtract = subtraction(, *subtraction_list)
-print(user_output_subtract)
+    print(calculate_with_two_parameter(subtraction))
+if choose_operation == "division":
+    print(calculate_with_two_parameter(division))
+
+'''
+Built two more functions that took inputs for the list of the numbers to be calculated. One for addition and multiplication as it only required one parameter, 
+and another for subtraction and division as those both require a separate start parameter from the listed args parameter that follows.
+Those two function conclude by giving a return statement that calls the initial functions from Task 1 once the operation has been identified.
+Lastly the if statements correlate to the input that chooses the operation and off of that input then calls the functions we just defined in this task.
+'''
+
+#Task 3 Ensure program can handle division by zero and other potential errors
