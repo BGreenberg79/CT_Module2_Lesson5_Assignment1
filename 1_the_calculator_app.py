@@ -91,3 +91,6 @@ Lastly the if statements correlate to the input that chooses the operation and o
 '''
 
 #Task 3 Ensure program can handle division by zero and other potential errors
+
+#Because it's set up to just run the function and because subtraction and division are combined I don't know where to put the code for if  terms_input == 0 print ("You cannot divide by zero choose another number")
+#Also don't know what other errors could exist. 
