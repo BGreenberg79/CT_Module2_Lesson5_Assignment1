@@ -57,7 +57,7 @@ def calculate_with_one_parameter(operation):
     while True:
         terms_input = input("What numbers would you like to calculate? (If finished type 'done'): ")
         if terms_input != 'done':
-            parameter_list.append(int(terms_input))
+            parameter_list.append(float(terms_input))
         if terms_input == 'done':
             break
     return operation(*parameter_list)
@@ -67,11 +67,13 @@ def calculate_with_two_parameter(operation):
     parameter_list = []
     while True:
         terms_input = input("What numbers would you like to calculate? (If finished type 'done'): ")
+        # if operation == "division" and terms_input == 0:
+        #     print("You cannot divide by zero, please enter a different divisor")
         if terms_input != 'done':
-            parameter_list.append(int(terms_input))
+            parameter_list.append(float(terms_input))
         if terms_input == 'done':
             break
-    return operation(int(start), *parameter_list)
+    return operation(float(start), *parameter_list)
 
 choose_operation = input("What operation would you like to use (addition, subtraction, multiplication, division): " )
 if choose_operation == "addition":
