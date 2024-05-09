@@ -67,7 +67,7 @@ def calculate_with_two_parameter(operation):
     parameter_list = []
     while True:
         terms_input = input("What numbers would you like to calculate? (If finished type 'done'): ")
-        # if operation == "division" and int(terms_input) == 0:
+        #if operation == "division" and int(terms_input) == 0:
         #   print("You cannot divide by zero, please enter a different divisor")
         if terms_input != 'done':
             parameter_list.append(float(terms_input))
@@ -93,6 +93,8 @@ Lastly the if statements correlate to the input that chooses the operation and o
 '''
 
 #Task 3 Ensure program can handle division by zero and other potential errors
-
-#Because it's set up to just run the function and because subtraction and division are combined I don't know where to put the code for if  terms_input == 0 print ("You cannot divide by zero choose another number")
-#Also don't know what other errors could exist. 
+'''
+Please see attempt 2. I had to regroup and restart as the two functions built in Task 2 could not
+account for zero division without separating input entries for subtraction and division. Thus my final answer only retained the four
+functions from Task 1.
+'''
