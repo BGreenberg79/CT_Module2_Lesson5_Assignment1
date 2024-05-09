@@ -93,5 +93,12 @@ if operation_choice == "division":
     print(division(float(start_divide), *parameter_list))
 
 '''
-Contains Tasks 1-3. Second attempt after first attempt tried to take user inputs in its own functions. When doing that attempt I was unable to solve how to account for zero division error, and realized I could only do so if I separated division from subtraction making those last two functions more harmful than helpful. You cannot test if a certain argument is being made in a function with an if loop! Thus this term breaks up those two functions from attempt 1 into more if tests and the four while loops have nested try/except terms to catch any errant user entries such as string where a number is expected.
+Contains Tasks 1-3. Second attempt after first attempt tried to take user inputs in 
+its own functions. When doing that attempt I was unable to solve how to account for 
+zero division error, and realized I could only do so if I separated division from 
+subtraction making those last two functions more harmful than helpful. You cannot test if 
+a certain argument is being made in a function with an if loop! Thus this term breaks up 
+those two functions from attempt 1 into more if tests and the four while loops have nested 
+try/except terms to catch any errant user entries such as string where a number is 
+expected.
 '''
